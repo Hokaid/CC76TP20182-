@@ -1,0 +1,12 @@
+"""
+def Isin(Arr, k):
+  for x in Arr:
+    if(k==x):
+      return True
+  return False
+"""
+#Y = [0]*3
+
+#while Isin(Y,u):
+        #u = random.randint(0,4)
+#Y[j] = u
