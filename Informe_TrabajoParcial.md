@@ -33,10 +33,6 @@ El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posible
 
 - Paso 1: Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar una imagen con el codigo correspondiente a esta parte:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-
-
 ###      3.2. Marco Teórico del Algoritmo de Backtracking
 ## 4. Analisis de Complejidad Algoritmica
 ###      4.1. Analisis del Algoritmo de Fuerza Bruta
