@@ -31,7 +31,31 @@ A continuación, se va a desarrollar el marco teórico de cada una de las estrat
 
 El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posibles (posibles soluciones para el problema), y apartir de una comparación de todos estos, determinar el camino mas corto encontrado. Para este algoritmo, se va a representar el mapa de centros poblados con un grafo. Para este caso particular, cada nodo vendria a representar un centro poblado, y las aristas serian los caminos entre los respectivos centros poblados con la distancia entre estos. La estructura usada para representar este grafo corresponde a una lista de adyacencia de pares ordenados. La posición de la lista en la que se encuentre el par ordenado coincide con el codigo del centro poblado de origen, la primera componente del par ordenado hace referencia a la longitud del camino, mientras que la segunda componente representa el nodo (centro poblado) de destino. A continuación, se pasara a explicar paso a paso cada parte de la estrategia utilizada.
 
-- Paso 1: Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar una imagen con el codigo correspondiente a esta parte:
+- Paso 1: Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
+
+```python
+            menor1_w = math.inf
+            menor1_v = -1
+            menor2_v = -1
+            menor2_w = math.inf
+            i = 0
+            for w,v in G[s]:
+                if not visitados[v]:
+                    if i == 0:
+                        if w < menor1_w:
+                            menor1_w = w
+                            menor1_v = v
+                    elif i >= 1:
+                        if w < menor1_w:
+                            menor2_w = menor1_w
+                            menor2_v = menor1_v
+                            menor1_v = v
+                            menor1_w = w
+                        elif w < menor2_w:
+                            menor2_w = w
+                            menor2_v = v
+                i = i + 1
+```
 
 ###      3.2. Marco Teórico del Algoritmo de Backtracking
 ## 4. Analisis de Complejidad Algoritmica
