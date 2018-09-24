@@ -13,7 +13,7 @@ B. Mejorar la habilidad para solucionar problemas cuanticos mediante la utilizac
 
 C. Desarrollar la destreza de utilizar tecnicas y herramientas modernas acorde con el problema planteado. 
 
-D. Aplicar las tecnicas de solución vistas a lo largo del curso en el desarrollo de los algoritmos que resolveran el problema planteado.
+D. Aplicar las tecnicas de solución vistas a lo largo del curso en el desarrollo de los algoritmos que resuelvan el problema planteado.
 
 E. Elaborar un marco teórico explicando detalladamente cada una de las estrategias usadas para dar solución al problema planteado. 
 
