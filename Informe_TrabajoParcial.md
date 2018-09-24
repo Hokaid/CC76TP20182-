@@ -17,7 +17,7 @@ D. Aplicar las tecnicas de solución vistas a lo largo del curso en el desarroll
 
 E. Elaborar un marco teórico explicando detalladamente cada una de las estrategias usadas para dar solución al problema planteado. 
 
-F. Realizar un análisis de la complejidad algorítmica para cada una de las estrategias utilizadas en la solución del problema dado.
+F. Realizar un análisis de la complejidad algorítmica para cada uno de los algoritmos utilizadas en la solución del problema dado.
 
 G. Encontrar un porcentaje de la solución del problema planteado (Problema del vendedor viajero).
 
