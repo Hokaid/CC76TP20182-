@@ -78,7 +78,7 @@ Además, tambien es importante tener un registro del camino que se esta recorrie
 ```
 - **Paso 3:** Una vez culminado el paso anterior, se procede a volver al Paso 1. El proceso anterior se repite hasta que todos los nodos del grafo hallan sido visitados o hasta que ya no se pueda seguir formando un camino. Llegados a este punto, se pasara a explicar el procedimiento a seguir para cada uno de los casos.
 
-En el primer caso, se busca si existe una arista que conecte de forma directa el ultimo nodo visitado con el nodo de origen. Si se encuentra dicha arista entonces se procede a realizar la conexión respectiva. Se actualizan los arreglos correspondientes a los registros de los nodos visitados, el camino y los pesos acumulados hasta cada nodo. Además, se registra el camino encontrado dentro de una matriz llamada **MatriPaths**, al igual que el arreglo de pesos dentro de la matriz **MatriPesos**. Avanzando en el tema, se pasar a mostrar el codigo respectivo: 
+- - En el primer caso, se busca si existe una arista que conecte de forma directa el ultimo nodo visitado con el nodo de origen. Si se encuentra dicha arista entonces se procede a realizar la conexión respectiva. Se actualizan los arreglos correspondientes a los registros de los nodos visitados, el camino y los pesos acumulados hasta cada nodo. Además, se registra el camino encontrado dentro de una matriz llamada **MatriPaths**, al igual que el arreglo de pesos dentro de la matriz **MatriPesos**. Avanzando en el tema, se pasar a mostrar el codigo respectivo: 
 
 ```python
 if (contador == len(G)-1):
