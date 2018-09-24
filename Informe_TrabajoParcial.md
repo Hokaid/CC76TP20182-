@@ -7,7 +7,7 @@ El problema que se va intentar resolver en este proyecto es El problema del vend
 
 ## 2. Objetivos del Proyecto
 
-A. Se busca desarrollar la capacidad de analizar datos representados bajo diversas formas tales como tablas y graficos.
+A. Analizar los datos correspondientes al problema, los cuales son representados bajo diversas formas tales como tablas y graficos, para poder plantear soluciones conevnientes al problema dado.
 
 B. Mejorar la habilidad para solucionar problemas cuanticos mediante la utilización de números y terminos matematicos.
 
@@ -17,11 +17,11 @@ D. Aplicar las tecnicas de solución vistas a lo largo del curso en el desarroll
 
 E. Elaborar un marco teórico explicando detalladamente cada una de las estrategias usadas para dar solución al problema planteado. 
 
-F. Realizar un análisis de la complejidad algorítmica para cada uno de los algoritmos utilizados.
+F. Determinar la complejidad algorítmica para cada uno de los algoritmos utilizados.
 
-G. Encontrar un porcentaje de la solución del problema planteado (Problema del vendedor viajero).
+G. Encontrar una solución optima para el problema planteado (Problema del vendedor viajero).
 
-H. Generar una adecuada visualización de resultados de acuerdo a las posibles soluciones encontradas para el problema dado.
+H. Generar una adecuada visualización de resultados de acuerdo a la solución encontrada.
 
 ## 3. Marco Teórico
 
