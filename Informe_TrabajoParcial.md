@@ -163,7 +163,9 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
 
 - Aplicando la notación Big O, se obtendria la siguiente expresión para representar la complejidad del algoritmo en el caso optimo de que nunca sea necesario utilizar la estrategia **USC**:
 
-                                           
+                                             Notación Big O: O(2^n)
+                                            
+                                            
 
 
 
