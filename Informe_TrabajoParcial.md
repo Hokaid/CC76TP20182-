@@ -123,6 +123,21 @@ if(encontrado == False):
 ## 4. Analisis de Complejidad Algoritmica
 ###      4.1. Analisis del Algoritmo basado en BackTracking, UCS y Programación dinamica
 
+Para realizar este analisis, se procedera a representar el tiempo de ejecución de nuestro algoritmo mediante una función **T(n)**, la cual es una función que depende de **n**. Además, se debe tener en cuenta que, para este caso particular, **n** representa el numero de nodos o lugares por visitar en el algoritmo planteado. 
+
+- El algoritmo a analizar es un algoritmo recursivo, cuyo tiempo de ejcución posee la siguiente forma:
+
+                                                T(n) = a*T(n-1) + O(n^k)
+          
+          a: este valor representa el numero de llamadas recursivas que se van realizar dentro de una llamada de la función.
+          k: este valor determina la complejidad de los procedimientos realizados en la función aparte de las llamadas recursivas.
+ 
+ Es importante resaltar que en la llamada recursiva, **n** se reduce en una unidad, debido a que en cada llamada recursiva se visita un nodo. Esto causa que cada vez queden menos nodos o lugares por visitar, lo que implica que se reduzca el tamaño del problema en una unidad por cada llamada recursiva. 
+          
+          
+
+
+
 
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
