@@ -122,5 +122,8 @@ if(encontrado == False):
 ###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 ## 4. Analisis de Complejidad Algoritmica
 ###      4.1. Analisis del Algoritmo basado en BackTracking, UCS y Programación dinamica
+
+
+
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
 ## 5. Conclusiones
