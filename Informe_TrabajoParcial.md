@@ -100,7 +100,7 @@ if (contador == len(G)-1):
                     solucionado[0] = 1
                     encontrado = True
 ```
-Sin embargo, si no existe la arista descrita anteriormente, entonces se debe realizar el uso de una estrategia llamada Busqueda de Costo Uniforme o UCS por sus siglas en ingles. Esta estrategia es basicamente una busqueda en anchura, pero considerando pesos. Se utilizara dicha estrategia para encontrar el camino mas corto desde el ultimo nodo visitado hasta el nodo de origen. No obstante, algunos nodos seran recorridos 2 veces, lo cual no concuerda con la solución que se desea encontrar. Sin embargo, como se esta utilizando la estrategia UCS, este camino de regreso sera el más corto posible, y por tanto no se alejaría tanto de la solcuión optima. Luego de aplicar UCS, se guarda el camino encontrado por esta estrategia en una matriz llamada **MatPar**, y el registro de los pesos acumulados para cada nodo en la matriz **MatPer**. Adicionalmente, tambien se guardan todos los demas registros especificados anteriormente. Continuando con el asunto, se procedera a mostrar el codigo correspondiente a esta parte:
+Sin embargo, si no existe la arista descrita anteriormente, entonces se debe realizar el uso de una estrategia llamada Busqueda de Costo Uniforme o **UCS** por sus siglas en ingles. Según lo comentado por Rihawi (2009), el algoritmo mencionado se basa en ir explorando todos los caminos más cortos que parten del nodo origen y que tienen como nodo destino a los demás, enumerando cada uno de los nodos del espacio de busqueda por costes crecientes; una vez obtenido el camino más corto desde el nodo de partida, hasta el nodo objetivo de la busqueda, el algoritmo se detiene. Este algoritmo es basicamente una busqueda en anchura, pero considerando pesos. Se utilizara dicha estrategia para encontrar el camino mas corto desde el ultimo nodo visitado hasta el nodo de origen. No obstante, algunos nodos seran recorridos 2 veces, lo cual no concuerda con la solución que se desea encontrar. Sin embargo, como se esta utilizando la estrategia UCS, este camino de regreso sera el más corto posible, y por tanto no se alejaría tanto de la solcuión optima. Luego de aplicar UCS, se guarda el camino encontrado por esta estrategia en una matriz llamada **MatPar**, y el registro de los pesos acumulados para cada nodo en la matriz **MatPer**. Adicionalmente, tambien se guardan todos los demas registros especificados anteriormente. Continuando con el asunto, se procedera a mostrar el codigo correspondiente a esta parte:
 
 ```python
 if(encontrado == False):
@@ -117,7 +117,7 @@ if(encontrado == False):
 ```
 **En el segundo caso**, pues si se llega a un nodo, en el cual todas las aristas que salen de el conectan con nodos que ya han sido visitados, pues se determina que el camino recorrido hasta ese momento no es una solución. Luego de esto, se procede a realizar lo denominado como **BackTrack**, es decir, se regresa en la recursividad buscando otros caminos o soluciones.
 
-- El algoritmo utilizado es un hibrido, ya que se basa en varias estrategias para dar solución al problema. Una de estas estrategias corresponden al **Backtracking**, ya que regresa en la recursividad buscando nuevos caminos cuando detecta que el camino que se esta siguiendo no es una posible solución. Asismismo, utiliza **UCS** cuando llega al ultimo nodo por visitar y este no se conecta de forma directa con el nodo de origen. Esto sucede, porque realiza una **Busqueda de Costo Uniforme** para determinar el camino más corto de regreso al nodo de origen. Incluso, se utilizan estrategias relacionadas a la **Programación Dinamica**, por ejemplo, cuando se realiza el procedimiento de escojer las dos aristas con menor peso que conectan un nodo con otros adyacentes. 
+- El algoritmo utilizado es un hibrido, ya que se basa en varias estrategias para dar solución al problema. Una de estas estrategias corresponden al **Backtracking**, ya que regresa en la recursividad buscando nuevos caminos cuando detecta que el camino que se esta siguiendo no es una posible solución. Asismismo, utiliza el algoritmo **UCS** cuando llega al ultimo nodo por visitar y este no se conecta de forma directa con el nodo de origen. Esto sucede, porque realiza una **Busqueda de Costo Uniforme** para determinar el camino más corto de regreso al nodo de origen. 
 
 ###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 ## 4. Analisis de Complejidad Algoritmica
@@ -177,5 +177,6 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
 ## 5. Conclusiones
 ## 6. Bibliografía 
 
-Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
+- Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
 
+- Rihawi, I. (6 de diciembre de 2009). Búsqueda no informada: Algoritmo de Coste Uniforme. Recuperado de https://poiritem.wordpress.com/2009/12/06/6-5-1-busqueda-no-informada-algoritmo-de-coste-uniforme/ 
