@@ -31,7 +31,7 @@ A continuación, se va a desarrollar el marco teórico de cada una de las estrat
 
 El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posibles (posibles soluciones para el problema), y apartir de una comparación de todos estos, determinar el camino mas corto encontrado. Para este algoritmo, se va a representar el mapa de centros poblados con un grafo. Para este caso particular, cada nodo vendria a representar un centro poblado, y las aristas serian los caminos entre los respectivos centros poblados con la distancia entre estos. La estructura usada para representar este grafo corresponde a una lista de adyacencia de pares ordenados. La posición de la lista en la que se encuentre el par ordenado coincide con el codigo del centro poblado de origen, la primera componente del par ordenado hace referencia a la longitud del camino, mientras que la segunda componente representa el nodo (centro poblado) de destino. A continuación, se pasara a explicar paso a paso cada parte de la estrategia utilizada.
 
-- Paso 1: Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
+- Paso 1: Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos **no visitados**, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
 
 ```python
             menor1_w = math.inf
@@ -55,6 +55,19 @@ El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posible
                             menor2_w = w
                             menor2_v = v
                 i = i + 1
+```
+- Paso 2: Una vez encontradas las dos aristas, se procede a realizar el recorrido atraves de cada una de estas llegando a un nuevo nodo. Esta operación se realiza mediante dos llamadas recursivas, en las cuales el nuevo nodo encontrado pasa a ser el nodo en el cual nos encontramos. Luego de realizar esta operación, se estaria regresando al paso 1, generando una progresión recursiva. El codigo correspondiente a lo explicado anteriormente, se muestra a continuación: 
+
+```python
+if (menor1_v != -1):
+                path1 = copy.copy(path)
+                pesos1 = copy.copy(pesos)
+                visitados1 = copy.copy(visitados)
+                if (salir[0] == False):
+                    _TSP_FuerzaBruta(G,menor1_v,path,pesos,distancia + menor1_w,s,visitados,contador+1, origen, MatriPesos, MatriPaths, ArrDistan, MatPer, MatPar, salir)
+                    if (menor2_w != math.inf)and(salir[0] == False):
+                        _TSP_FuerzaBruta(G,menor2_v,path1,pesos1,distancia + menor2_w,s,visitados1,contador+1, origen, MatriPesos, MatriPaths, ArrDistan, MatPer,MatPar,salir)
+
 ```
 
 ###      3.2. Marco Teórico del Algoritmo de Backtracking
