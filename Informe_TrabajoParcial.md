@@ -161,9 +161,11 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
                                                 T(n) = (2^n)*1+(2^n)-1
                                                 T(n) = 2*(2^n)-1
 
-- Aplicando la notación Big O, se obtendria la siguiente expresión para representar la complejidad del algoritmo en el caso optimo de que nunca sea necesario utilizar la estrategia **USC**:
+- Aplicando la notación Big O, se obtendria la siguiente expresión para representar la complejidad del algoritmo en el caso optimo de que nunca sea necesario utilizar la estrategia **UCS**:
 
                                              Notación Big O: O(2^n)
+                                             
+- No obstante, como ya se menciono, la notación utilizada anteriormente representa la complejidad del algoritmo solo en el caso ideal de que nunca haya sido necesario recurrir al uso de la estrategia **UCS**. En el algoritmo planteado, si se terminan de recorrer todos los nodos y no existe una arista que conecte derectamente el ultimo nodo visitado con el nodo de origen, entonces se procede a aplicar la estrategia de la **Busqueda de Costo Uniforme** (**UCS**). Se procede a buscar a partir del ultimo nodo visitado, el camino más corto hacia el nodo de origen. Esta operación se realiza atraves de una busqueda **UCS**. Si en el grafo sobre el cual se aplica este algoritmo, todos los nodos estan conectados entre si atraves de solo una arista, entonces nunca sera necesario el uso de la estrategia **UCS**. Por lo tanto, para ese caso, se podria considerar la expresión determinada anteriormente para representar su complejidad. 
                                             
                                             
 
