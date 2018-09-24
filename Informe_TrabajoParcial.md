@@ -132,9 +132,38 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
           a: este valor representa el numero de llamadas recursivas que se van realizar dentro de una llamada de la función.
           k: este valor determina la complejidad de los procedimientos realizados en la función aparte de las llamadas recursivas.
  
- Es importante resaltar que en la llamada recursiva, **n** se reduce en una unidad, debido a que en cada llamada recursiva se visita un nodo. Esto causa que cada vez queden menos nodos o lugares por visitar, lo que implica que se reduzca el tamaño del problema en una unidad por cada llamada recursiva. 
-          
-          
+ Es importante resaltar que en la llamada recursiva, **n** se reduce en una unidad, debido a que en cada llamada recursiva se visita un nodo. Esto causa que cada vez queden menos nodos o lugares por visitar, lo que implica que se reduzca el tamaño del problema en una unidad por cada llamada recursiva.
+ 
+- Para el caso de este algoritmo, **a** adquiere el valor de 2, ya que en cada llamada de la función se realizan 2 llamadas recursivas correspondientes a los 2 nodos más cercanos. Del mismo modo, **k** toma el valor de 0, debido a que la complejidad de las operaciones ejecutadas en la función sin considerar las llamadas recursivas es independiente del valor de **n**, y posee tiempo constante. Reanudando el tema, se pasara a representar lo dicho anteriormente:
+
+                                                T(n) = 2*T(n-1) + O(1)
+                                                
+- En las expresones que se determinaran a continuación se hace referencia a la expresión **O(n)** con **1**. Si se lleva a cabo un analisis un poco exaustivo, aplicando la recursividad unas cuantas veces y siguiendo la formula anterior, se pueden obtener las siguiente expresiones:
+
+                                (1)................T(n) = 2*T(n-1)+1
+                                (2)................T(n) = 2*(2*T(n-2)+1)+1
+                                (3)................T(n) = 2*(2*(2*T(n-3)+1)+1)+1
+                                (4)................T(n) = 2*(2*(2*(2*T(n-4)+1)+1)+1)+1
+                                (5)................T(n) = 2*(2*(2*(2*(2*T(n-5)+1)+1)+1)+1)+1
+                                
+- Como se puede apreciar, mientras más se va siguiendo la recursividad, se puede notar que se va formando un patron. Analizando nuevamente y simplificando cada espresión, se determina el siguiente patron: 
+
+                                (i)................T(n) = (2^i)*T(n-i)+(2^i)-1
+                                
+              i: este valor corresponde al nivel de profundidad alacanzado en la recursividad.
+                                
+- De esta forma, si se desea obtener la complejidad del algoritmo planteado, basta con remplazar el valor de **i** con el valor de **n**. Esto es así, ya que se debe tener en cuenta que la maxima profundidad recursiva alcanzada por el algoritmo coincide con el valor de **n**. Si se realiza la operación descrita anteriormente, se obtiene lo siguiente:
+
+                                (n)................T(n) = (2^n)*T(n-n)+(2^n)-1
+                                
+- Se va a considerar que **T(n-n)**, es decir, **T(0)** adquiere el valor de 1. Esto es así, debido a que se detectaría que en el grafo ya no hay más nodos por visitar y finalizaría el algoritmo sin realizar ninguna operación. Avanzando en el tema, se pasara a representar el resultado obtenido aplicando lo dicho anteriormente:
+
+                                                T(n) = (2^n)*1+(2^n)-1
+                                                T(n) = 2*(2^n)-1
+
+- Aplicando la notación Big O, se obtendria la siguiente expresión para representar la complejidad del algoritmo en el caso optimo de que nunca sea necesario utilizar la estrategia **USC**:
+
+                                           
 
 
 
