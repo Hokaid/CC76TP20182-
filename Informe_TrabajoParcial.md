@@ -25,13 +25,13 @@ H. Generar una adecuada visualización de resultados de acuerdo a la solución e
 
 ## 3. Marco Teórico
 
-A continuación, se va a desarrollar el marco teórico correspondiente a cada uno de los algoritmos planteados para dar solución del problema.
+A continuación, se va a desarrollar el marco teórico correspondiente a cada uno de los algoritmos planteados para dar solución al problema dado.
 
-###      3.1. Marco Teórico del Algoritmo basado en BackTracking, UCS y Programación dinamica
+###      3.1. Marco Teórico del Algoritmo basado en BackTracking y UCS
 
 El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posibles (posibles soluciones para el problema), y apartir de una comparación de todos estos, determinar el camino más corto encontrado. Para este algoritmo, se va a representar el mapa de centros poblados con un grafo. Para este caso particular, cada nodo vendria a representar un centro poblado, y las aristas serian los caminos entre los respectivos centros poblados con la distancia entre estos. La estructura usada para representar este grafo corresponde a una lista de adyacencia de pares ordenados. La posición de la lista en la que se encuentre el par ordenado coincide con el codigo del centro poblado de origen, la primera componente del par ordenado hace referencia a la longitud del camino, mientras que la segunda componente representa el nodo (centro poblado) de destino. A continuación, se pasara a explicar paso a paso cada parte de la estrategia utilizada.
 
-- **Paso 1:** Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos **no visitados**, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
+- **Paso 1:** Esta parte del algoritmo esta basada en lo mencionado por Jacqueline Köhler. Köhler (2010) comenta que si se desea obtener una solución rapida (en un tiempo razonable) al problema, sin necesidad de que esta sea la más optima, se puede utilizar el metodo del vecino más cercano. De acuerdo a lo comentado por Köhler (2010), este metodo consiste en formar el camino solución, eligiendo en cada iteración el nodo más cercano para realizar el recorrido. En este paso, se utilizara una variación se ese metodo, ya que se seleccionaran los dos nodos más cercanos para buscar los caminos correspondientes. Siguiendo en este razonamiento, se pasara a explicar lo que implica este paso del algoritmo. Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos **no visitados**, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
 
 ```python
             menor1_w = math.inf
@@ -175,3 +175,7 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
 ## 5. Conclusiones
+## 6. Bibliografía 
+
+Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
+
