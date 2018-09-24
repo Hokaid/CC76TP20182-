@@ -58,18 +58,9 @@ El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posible
 ```
 - **Paso 2:** Una vez encontradas las dos aristas, se procede a realizar el recorrido atraves de cada una de estas llegando a un nuevo nodo. Esta operación se realiza mediante dos llamadas recursivas, en las cuales el nuevo nodo encontrado pasa a ser el nodo en el cual nos encontramos. Luego de realizar esta operación, se estaria regresando al paso 1, generando una progresión recursiva. El codigo correspondiente a lo explicado anteriormente, se muestra a continuación: 
 
-```python
-if (menor1_v != -1):
-                path1 = copy.copy(path)
-                pesos1 = copy.copy(pesos)
-                visitados1 = copy.copy(visitados)
-                if (salir[0] == False):
-                    _TSP_FuerzaBruta(G,menor1_v,path,pesos,distancia + menor1_w,s,visitados,contador+1, origen, MatriPesos, MatriPaths, ArrDistan, MatPer, MatPar, salir)
-                    if (menor2_w != math.inf)and(salir[0] == False):
-                        _TSP_FuerzaBruta(G,menor2_v,path1,pesos1,distancia + menor2_w,s,visitados1,contador+1, origen, MatriPesos, MatriPaths, ArrDistan, MatPer,MatPar,salir)
 
-```
-  - Además, tambien es importante tener un registro del camino que se esta recorriendo y los pesos acumulados hasta cada nodo en dicho camino. Esto se logra atraves de dos arreglos llamados camino (**Path**) y pesos respectivamente. En el primero, cada posición del arreglo corresponde al codigo de cierto nodo, mientras que el valor que se encuentra en esa posición hace referencia al codigo del nodo padre o nodo antecesor siguiendo la estructura de un camino. En el arreglo de pesos, de igual forma que en el arreglo anterior, cada posición del arreglo representa el codigo de cierto nodo. No obstante, el valor que se encuentra en esa posición es el peso acumulado hasta el nodo referenciado por dicha posición. Asimismo, existe un arreglo que se encarga de llevar el registro de todos los nodos visitados. Antes de terminar con el Paso 2 y volver al Paso 1, se deben de actualizar las estructuras descritas anteriormente. De esta manera se llevara un registro adecuado del camino recorrido y de los nodos visitados hasta el momento. Avanzando en el tema, se pasara a mostrar el codigo relacionado con lo descrito anteriormente: 
+
+   - Además, tambien es importante tener un registro del camino que se esta recorriendo y los pesos acumulados hasta cada nodo en dicho camino. Esto se logra atraves de dos arreglos llamados camino (**Path**) y pesos respectivamente. En el primero, cada posición del arreglo corresponde al codigo de cierto nodo, mientras que el valor que se encuentra en esa posición hace referencia al codigo del nodo padre o nodo antecesor siguiendo la estructura de un camino. En el arreglo de pesos, de igual forma que en el arreglo anterior, cada posición del arreglo representa el codigo de cierto nodo. No obstante, el valor que se encuentra en esa posición es el peso acumulado hasta el nodo referenciado por dicha posición. Asimismo, existe un arreglo que se encarga de llevar el registro de todos los nodos visitados. Antes de terminar con el Paso 2 y volver al Paso 1, se deben de actualizar las estructuras descritas anteriormente. De esta manera se llevara un registro adecuado del camino recorrido y de los nodos visitados hasta el momento. Avanzando en el tema, se pasara a mostrar el codigo relacionado con lo descrito anteriormente: 
 
 ```python
             visitados[s] = True
