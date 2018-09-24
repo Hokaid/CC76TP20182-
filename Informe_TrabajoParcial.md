@@ -25,11 +25,11 @@ H. Generar una adecuada visualización de resultados de acuerdo a las posibles s
 
 ## 3. Marco Teórico
 
-A continuación, se va a desarrollar el marco teórico de cada una de las estrategias aplicadas para las solución del problema.
+A continuación, se va a desarrollar el marco teórico correspondiente a cada uno de los algoritmos planteados para dar solución del problema.
 
-###      3.1. Marco Teórico del Algoritmo de Fuerza Bruta
+###      3.1. Marco Teórico del Algoritmo basado en BackTracking, UCS y Programación dinamica
 
-El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posibles (posibles soluciones para el problema), y apartir de una comparación de todos estos, determinar el camino mas corto encontrado. Para este algoritmo, se va a representar el mapa de centros poblados con un grafo. Para este caso particular, cada nodo vendria a representar un centro poblado, y las aristas serian los caminos entre los respectivos centros poblados con la distancia entre estos. La estructura usada para representar este grafo corresponde a una lista de adyacencia de pares ordenados. La posición de la lista en la que se encuentre el par ordenado coincide con el codigo del centro poblado de origen, la primera componente del par ordenado hace referencia a la longitud del camino, mientras que la segunda componente representa el nodo (centro poblado) de destino. A continuación, se pasara a explicar paso a paso cada parte de la estrategia utilizada.
+El algoritmo planteado se basa en encontrar la mayor cantidad de caminos posibles (posibles soluciones para el problema), y apartir de una comparación de todos estos, determinar el camino más corto encontrado. Para este algoritmo, se va a representar el mapa de centros poblados con un grafo. Para este caso particular, cada nodo vendria a representar un centro poblado, y las aristas serian los caminos entre los respectivos centros poblados con la distancia entre estos. La estructura usada para representar este grafo corresponde a una lista de adyacencia de pares ordenados. La posición de la lista en la que se encuentre el par ordenado coincide con el codigo del centro poblado de origen, la primera componente del par ordenado hace referencia a la longitud del camino, mientras que la segunda componente representa el nodo (centro poblado) de destino. A continuación, se pasara a explicar paso a paso cada parte de la estrategia utilizada.
 
 - **Paso 1:** Consiste en apartir de un nodo de origen buscar, de todas las posibles aristas que lo conectan con otros nodos **no visitados**, las dos aristas que cuenten con menor peso. Llegados a este punto, se pasara a mostrar el codigo correspondiente a esta parte:
 
@@ -79,7 +79,7 @@ Además, tambien es importante tener un registro del camino que se esta recorrie
 ```
 - **Paso 3:** Una vez culminado el paso anterior, se procede a volver al Paso 1. El proceso anterior se repite hasta que todos los nodos del grafo hallan sido visitados o hasta que ya no se pueda seguir formando un camino. Llegados a este punto, se pasara a explicar el procedimiento a seguir para cada uno de los casos.
 
-**En el primer caso**, se busca si existe una arista que conecte de forma directa el ultimo nodo visitado con el nodo de origen. Si se encuentra dicha arista entonces se procede a realizar la conexión respectiva. Se actualizan los arreglos correspondientes a los registros de los nodos visitados, el camino y los pesos acumulados hasta cada nodo. Además, se registra el camino encontrado dentro de una matriz llamada **MatriPaths**, al igual que el arreglo de pesos dentro de la matriz **MatriPesos**. Igualmente, se desea tener un registro de todas las distancias correspondientes a cada camino, las cuales se guardan en **ArrDistan**. Avanzando en el tema, se pasar a mostrar el codigo respectivo: 
+**En el primer caso**, se busca si existe una arista que conecte de forma directa el ultimo nodo visitado con el nodo de origen. Si se encuentra dicha arista entonces se procede a realizar la conexión respectiva. Se actualizan los arreglos correspondientes a los registros de los nodos visitados, el camino y los pesos acumulados hasta cada nodo. Además, se registra el camino encontrado dentro de una matriz llamada **MatriPaths**, al igual que el arreglo de pesos dentro de la matriz **MatriPesos**. Igualmente, se desea tener un registro de todas las distancias totales correspondientes a cada camino, las cuales se guardan en **ArrDistan**. Avanzando en el tema, se pasar a mostrar el codigo respectivo: 
 
 ```python
 if (contador == len(G)-1):
@@ -119,8 +119,8 @@ if(encontrado == False):
 
 - El algoritmo utilizado es un hibrido, ya que se basa en varias estrategias para dar solución al problema. Una de estas estrategias corresponden al **Backtracking**, ya que regresa en la recursividad buscando nuevos caminos cuando detecta que el camino que se esta siguiendo no es una posible solución. Asismismo, utiliza **UCS** cuando llega al ultimo nodo por visitar y este no se conecta de forma directa con el nodo de origen. Esto sucede, porque realiza una **Busqueda de Costo Uniforme** para determinar el camino más corto de regreso al nodo de origen. Incluso, se utilizan estrategias relacionadas a la **Programación Dinamica**, por ejemplo, cuando se realiza el procedimiento de escojer las dos aristas con menor peso que conectan un nodo con otros adyacentes. 
 
-###      3.2. Marco Teórico del Algoritmo de Backtracking
+###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 ## 4. Analisis de Complejidad Algoritmica
-###      4.1. Analisis del Algoritmo de Fuerza Bruta
-###      4.2. Analisis del Algoritmo de Backtracking
+###      4.1. Analisis del Algoritmo basado en BackTracking, UCS y Programación dinamica
+###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
 ## 5. Conclusiones
