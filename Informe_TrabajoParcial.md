@@ -121,7 +121,7 @@ if(encontrado == False):
 
 ###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 ## 4. Analisis de Complejidad Algoritmica
-###      4.1. Analisis del Algoritmo basado en BackTracking, UCS y Programación dinamica
+###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
 
 Para realizar este analisis, se procedera a representar el tiempo de ejecución de nuestro algoritmo mediante una función **T(n)**, la cual es una función que depende de **n**. Además, se debe tener en cuenta que, para este caso particular, **n** representa el numero de nodos o lugares por visitar en el algoritmo planteado. 
 
@@ -165,13 +165,23 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
 
                                              Notación Big O: O(2^n)
                                              
-- No obstante, como ya se menciono, la notación utilizada anteriormente representa la complejidad del algoritmo solo en el caso ideal de que nunca haya sido necesario recurrir al uso de la estrategia **UCS**. En el algoritmo planteado, si se terminan de recorrer todos los nodos y no existe una arista que conecte derectamente el ultimo nodo visitado con el nodo de origen, entonces se procede a aplicar la estrategia de la **Busqueda de Costo Uniforme** (**UCS**). Se procede a buscar a partir del ultimo nodo visitado, el camino más corto hacia el nodo de origen. Esta operación se realiza atraves de una busqueda **UCS**. Si en el grafo sobre el cual se aplica este algoritmo, todos los nodos estan conectados entre si atraves de solo una arista, entonces nunca sera necesario el uso de la estrategia **UCS**. Por lo tanto, para ese caso, se podria considerar la expresión determinada anteriormente para representar su complejidad. 
-                                            
-                                            
+- No obstante, como ya se menciono, la notación utilizada anteriormente representa la complejidad del algoritmo solo en el caso ideal de que nunca haya sido necesario recurrir al uso de la estrategia **UCS**. En el algoritmo planteado, si se terminan de recorrer todos los nodos y no existe una arista que conecte derectamente el ultimo nodo visitado con el nodo de origen, entonces se procede a aplicar la estrategia de la **Búsqueda de Costo Uniforme** (**UCS**). Se procede a buscar a partir del ultimo nodo visitado, el camino más corto hacia el nodo de origen. Esta operación se realiza atraves de una busqueda **UCS**. Si en el grafo sobre el cual se aplica este algoritmo, todos los nodos estan conectados entre si atraves de solo una arista, entonces nunca sera necesario el uso de la estrategia **UCS**. Por lo tanto, para ese caso, se podria considerar la expresión determinada anteriormente para representar la complejidad del algoritmo. Ahora bien, se debe analizar la complejidad algoritmica a partir del peor caso. En ese sentido, el peor caso para este algoritmo consistiría en haber utilizado la **Búsqueda de Costo Uniforme** para construir todos y cada uno de los caminos (soluciones) encontrados. Por lo tanto, si se desea conocer la complejidad algoritmica para este caso, sería conveniente determinar primero la complejidad del algoritmo **UCS**. Este algoritmo recorre cada nodo una sola vez. El procedmiento que sigue consiste en agregar los nodos hijos de cada nodo padre a una cola de prioridad, asignadoles a cada uno un valor de prioridad correpondiente al peso de la arista que se debe recorrer para llegar a dicho nodo. De esta manera, un nodo más cercano tiene mayor prioridad que uno más lejano. En la cola de prioridad, los nodos de mayor prioridad deben salir de la cola primero que los de menor. De acuerdo a lo dicho anteriormente, en el algoritmo **UCS** se va liberando cada nodo de la cola de prioridad, agregando sus nodos hijos con su valor de prioridad debidamente asignado. El algoritmo se detiene cuando se encuentra el nodo objetivo. En consecuencia, al finalizar el algoritmo, se termina realizando una busqueda en anchura (**BFS**), pero considerando costos, de tal forma que primero se busca en los nodos más cercanos. De acuerdo a lo investigado, es sumamente complicado determinar la complejidad exacta de este algoritmo, ya que depende mucho de la forma en la que estan distribuidas las aristas, los pesos de las aristas y los nodos del grafo respectivo. Por esta razón, se ha decidido basarse en algunas fuentes para poder dar una expresión que estime dicha complejidad. De acuerdo a lo argumentado por Fernando (2017), se puede realizar una aproximación a la complejidad del algoritmo **UCS** en el peor de los casos, asumiendo que cada uno de los arcos del arbol tiene un coste mínimo **p** y que el tiempo de la solución optima viene dado por **C**. Por lo tanto, y siguiendo lo mencionado por Fernando (2017), se puede verificar que la complejidad basada en tiempo y espacio para **UCS** es:
 
+                                             Notación Big O: O(h^(1+(C/p)))
+                                             
+                  h: este valor corresponde al número promedio de descendientes por nodo.
+                                             
+En este sentido, para el peor caso, el cual consiste en que para todos los caminos encontrados haya necesario el uso del algoritmo **UCS**, la complejidad algoritmica o el tiempo de ejecución **T(n)** se podria aproximar con la siguiente expresión:
 
-
-
+                                             T(n) = 2^n + X*(h^(1+(C/p)))
+                                        
+                  n: representa el numero de nodos o lugares por visitar en el algoritmo planteado.
+                  h: este valor corresponde al número promedio de descendientes por nodo.
+                  p: peso mínimo de los arcos en el grafo.
+                  C: representa el tiempo de la solución optima para el algoritmo UCS.
+                 
+Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoria de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Por lo tanto, se podria estimar la complejidad del algoritmo como una expresión que varia entre la primera Notación Big O dada (**(2^n)**) y la ultima expresión representada, dependiendo de las condiciones del grafo. 
+                 
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
 ## 5. Conclusiones
@@ -180,3 +190,5 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
 - Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
 
 - Rihawi, I. (6 de diciembre de 2009). Búsqueda no informada: Algoritmo de Coste Uniforme. Recuperado de https://poiritem.wordpress.com/2009/12/06/6-5-1-busqueda-no-informada-algoritmo-de-coste-uniforme/ 
+
+- Fernando, P. (18 de diciembre de 2017). Algoritmo para búsqueda con coste uniforme. Recuperado de https://www.revolucionia.com/2017/12/Algoritmo_para_busqueda_con_coste_uniforme.html
