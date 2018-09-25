@@ -180,7 +180,7 @@ En este sentido, para el peor caso, el cual consiste en que para todos los camin
                   p: peso mínimo de los arcos en el grafo.
                   C: representa el tiempo de la solución optima para el algoritmo UCS.
                  
-Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoria de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Por lo tanto, se podria estimar la complejidad del algoritmo como una expresión que varia entre la primera Notación Big O dada (**(2^n)**) y la ultima expresión representada, dependiendo de las condiciones del grafo. 
+- Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoria de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Por lo tanto, se podria estimar la complejidad del algoritmo como una expresión que varia entre la primera Notación Big O dada (**(2^n)**) y la ultima expresión representada, dependiendo de las condiciones del grafo. 
                  
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
