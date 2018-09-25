@@ -29,7 +29,7 @@ def ucs(G, s, t, pesos, padres):
 def TSP_FuerzaBruta(G, ciudad, peso, camino, distamin, solup, solucionado, cityorigin):
    
     def _TSP_FuerzaBruta(G, s, path,pesos,distancia, padre, visitados, contador, origen, MatriPesos, MatriPaths, ArrDistan, MatPer, MatPar, salir):
-        if (contador == 970):
+        if (contador == 900):
             conti = 0
             for y in visitados:
                 if y == True:
@@ -104,7 +104,6 @@ def TSP_FuerzaBruta(G, ciudad, peso, camino, distamin, solup, solucionado, cityo
     path = [-1]*n
     pesos = [math.inf]*n
     visitados = [False]*n
-    waycounter = []
     ArrDistan = []
     MatriPaths = []
     MatriPesos = []
