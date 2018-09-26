@@ -53,7 +53,7 @@ def Ir_A_Algoritmo():
               TSP_FuerzaBruta(T, ciudad, peso, camino, distamin, solup, solucionado, originNode.get())
             elif (estrategia.get() == "DFS y FuerzaBruta"):
               salir = [False]*1
-              SeleccionarCamino(T, originNode.get(), 0, salir, camino, distamin, solup, ciudad, peso, solucionado)
+              TSP_DFS(T, originNode.get(), salir, ciudad, peso, distamin, solup, camino, solucionado)
             else:
               messagebox.showwarning("Algoritmo Inadecuada","Por favor indique un algoritmo a ejecutar valido")
             if (solucionado[0] != 1):                                                                                                                                                                                                                                                                                                                                                                                                   
