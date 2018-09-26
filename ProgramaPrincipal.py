@@ -81,5 +81,5 @@ Titulo = Label(ventanap, text="TRAVEL SALESMAN PROBLEM (Posibles soluciones)",
                  bg="#FFFF00",fg="#000").place(x=60,y=110)
 Option = Label(ventanap, text="Seleccióne la estrategia a probar :",
                  bg="#7FFF00",fg="#000").place(x=105,y=150)
-botonA1 = Button(ventanap,text="Iniciar Prueva de los algoritmos",command=abrir_ventana2).place(x=110,y=220)
+botonA1 = Button(ventanap,text="Iniciar Prueva de los algoritmos",command=abrir_ventana2).place(x=107,y=217)
 ventanap.mainloop()
