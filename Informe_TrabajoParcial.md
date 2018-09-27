@@ -180,7 +180,7 @@ En este sentido, para el peor caso, el cual consiste en que para todos los camin
                   C: representa el tiempo de la solución óptima para el algoritmo UCS.
                   X: número de caminos (soluciones) encontrados.
                  
-- Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoría de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Esto sucede porque no siempre va a ser necesario hacer uso de dicho algoritmo para encontrar un camino (solución). Por lo tanto, se podría estimar la complejidad del algoritmo como una expresión que varía entre la primera Notación Big O dada (**(2^n)**) y la última expresión representada, dependiendo de las condiciones del grafo. 
+- Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoría de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Esto sucede porque no siempre va a ser necesario hacer uso de dicho algoritmo para encontrar un camino (posible solución). Por lo tanto, se podría estimar la complejidad del algoritmo como una expresión que varía entre la primera Notación Big O dada (**(2^n)**) y la última expresión representada, dependiendo de las condiciones del grafo. 
                  
 
 ###      4.2. Análisis del Algoritmo basado en DFS y Fuerza Bruta
