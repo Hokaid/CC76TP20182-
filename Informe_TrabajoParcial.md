@@ -121,8 +121,8 @@ if(encontrado == False):
 
 ###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 Los recursos recuperados para la implementación del algoritmo se basan en dos puntos principales:
-•	Información sobre el problema del problema del vendedor viajero (traveling salesman problem).
-•	Información sobre algoritmos de tipo backtraking que resuelvan problemas con nodos.  
+- Información sobre el problema del vendedor viajero (traveling salesman problem).
+- Información sobre algoritmos de tipo backtraking que resuelvan problemas con nodos.  
 
 A continuación, se mostrara parte de la imformación recuperada de cada punto.
 
@@ -416,6 +416,8 @@ print(tps2 - tps1)
 ```
 
 ## 4. Analisis de Complejidad Algoritmica
+-A continuación, se pasará a definir el concepto de complejidad algorítmica:
+ “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid). Llegados a este punto, se procederá a analizar la complejidad algorítmica de cada uno de los algoritmos planteados. 
 ###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
 
 Para realizar este analisis, se procedera a representar el tiempo de ejecución de nuestro algoritmo mediante una función **T(n)**, la cual es una función que depende de **n**. Además, se debe tener en cuenta que, para este caso particular, **n** representa el numero de nodos o lugares por visitar en el algoritmo planteado. 
@@ -480,9 +482,7 @@ En este sentido, para el peor caso, el cual consiste en que para todos los camin
                  
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
--A continuación, se pasará a definir el concepto de complejidad algorítmica:
- “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid)
- 
+
 Para determinar la complejidad del algoritmo propuesto se hará uso de la siguiente formula, es importante resaltar que la formula propuesta nos ayudara a determinar la complejidad de la parte recursiva de este. 
 
                                                 T(n) = a*T(n-1) + O(n^k)
