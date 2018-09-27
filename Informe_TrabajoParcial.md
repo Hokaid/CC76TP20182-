@@ -562,14 +562,14 @@ La permutación de la identidad toma una forma que asemeja la de una progresión
                                             (n)*(n-1)*(n-2)*(n-3)*(n-4)*...*(n-(n-1)) - 1
                                                     
 'n' representa el numero de nodos del algoritmo.                                                  
-Resolviendo por concemtos matematicos nos queda la complejidad final del algoritmo:
+Resolviendo por conceptos matematicos nos queda la complejidad final del algoritmo:
                                                    
                                                      Big(o): O(!(n - 1))
                                                      
 En concecuencia, concluimos que el algoritmo basado en DFS y Fuerza Bruta es inmanejable, ya que la complejidad big(o) del algoritmo es de tipo factorial.                                                   
 
 ## 5. Conclusiones
-- En conclusión, se cumplieron los objetivos propuestos satisfactoriamente. Se desarrollo soluciones basadas en el problema dado haciendo uso de herramientas y técnicas (Algoritmos) aprendidas a lo largo del curso. Los algoritmos usados para dicha solución son: Backtraking-UCS y DFS. De la misma forma, se evidencio la aplicación de las competencias generales y específicas, siendo estas las de Razonamiento Cuantitativo y, Planificación y Conducción de Experimentos respectivamente. Esto se ve reflejado en el uso de técnicas matemáticas (Teorema Maestro) para hallar la complejidad de los algoritmos implementados y la exhaustiva investigación de algoritmos que den una solución adecuada al problema planteado. Para finalizar, el presente trabajo satisface los objetivos planteados. A continuación, se plantarán las conclusiones acorde con los objetivos dados:
+- En conclusión, se cumplieron los objetivos propuestos satisfactoriamente. Se desarrollo soluciones basadas en el problema dado haciendo uso de herramientas y técnicas (Algoritmos) aprendidas a lo largo del curso. Los algoritmos usados para dicha solución son: Backtraking-UCS y DFS-Fuerza bruta. De la misma forma, se evidencio la aplicación de las competencias generales y específicas, siendo estas las de Razonamiento Cuantitativo y, Planificación y Conducción de Experimentos respectivamente. Esto se ve reflejado en el uso de técnicas matemáticas (Teorema Maestro) para hallar la complejidad de los algoritmos implementados y la exhaustiva investigación de algoritmos que den una solución adecuada al problema planteado. Para finalizar, el presente trabajo satisface los objetivos planteados. A continuación, se plantarán las conclusiones acorde con los objetivos dados:
 
 A. Se realizó un análisis adecuado de los datos del problema, los cuales estaban representados mediante tablas, para llegar a una solución satisfactoria. 
 
