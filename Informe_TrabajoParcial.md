@@ -414,8 +414,7 @@ print "temps d'execution"
 print(tps2 - tps1)
 
 ```
-Debido a que la sulucion del problema se llevo a cabo mediante la combinación de los algoritmos DFS y Fuerza Bruta. De los algoritmos, mencionados anterirmente, se recupero la logica del Backtraking y se hizo un acercamiento a la solucion recorriendo todos los nodos mediante fuerza bruta.
-En sintesis, para poder solucionar el problema del vendedor viajero es necesario llevar a cabo una investigacion orientada al entendimiento del problema y su respectiva solución. 
+Debido a que la solución del problema se llevo a cabo mediante la combinación de los algoritmos DFS y Fuerza Bruta. De los algoritmos, mencionados anterirmente, se recupero la logica del recorido DFS y se hizo un acercamiento a la solucion recorriendo todos los nodos mediante fuerza bruta. El algoritmo planteado se basa en realizar un recorrido de tipo DFS a través del grafo, probando todos los caminos (soluciones) posibles y determinando el mejor de ellos. En sintesis, para poder solucionar el problema del vendedor viajero es necesario llevar a cabo una investigacion orientada al entendimiento del problema y su respectiva solución. 
 
 ## 4. Analisis de Complejidad Algoritmica
 ###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
@@ -570,9 +569,9 @@ Resolviendo por concemtos matematicos nos queda la complejidad final del algorit
 En concecuencia, concluimos que el algoritmo basado en DFS y Fuerza Bruta es inmanejable, ya que la complejidad big(o) del algoritmo es de tipo factorial.                                                   
 
 ## 5. Conclusiones
-- En conclusión, se cumplieron los objetivos propuestos satisfactoriamente. Se desarrollo soluciones basadas en el problema dado haciendo uso de herramientas y técnicas (Algoritmos) aprendidas a lo largo del curso. Los algoritmos usados para dicha solución son: Backtraking-UCS y DFS. De la misma forma, se evidencio la aplicación de las competencias generales y específicas, siendo estas las de Razonamiento Cuantitativo y, Planificación y Conducción de Experimentos respectivamente. Esto se ve reflejado en el uso de técnicas matemáticas (Teorema Maestro) para hallar la complejidad de los algoritmos implementados y la exhaustiva investigación de algoritmos que den una solución adecuada al problema planteado. Para finalizar, el presente trabajo satisface los objetivos planteados.
+- En conclusión, se cumplieron los objetivos propuestos satisfactoriamente. Se desarrollo soluciones basadas en el problema dado haciendo uso de herramientas y técnicas (Algoritmos) aprendidas a lo largo del curso. Los algoritmos usados para dicha solución son: Backtraking-UCS y DFS. De la misma forma, se evidencio la aplicación de las competencias generales y específicas, siendo estas las de Razonamiento Cuantitativo y, Planificación y Conducción de Experimentos respectivamente. Esto se ve reflejado en el uso de técnicas matemáticas (Teorema Maestro) para hallar la complejidad de los algoritmos implementados y la exhaustiva investigación de algoritmos que den una solución adecuada al problema planteado. Para finalizar, el presente trabajo satisface los objetivos planteados. A continuación, se plantarán las conclusiones acorde con los objetivos dados:
 
-A. Se planteo una solución satisfactoria al problema y se presento mediante tablas.
+A. Se realizó un análisis adecuado de los datos del problema, los cuales estaban representados mediante tablas, para llegar a una solución satisfactoria. 
 
 B. Se desarrollo soluciónes para el problema usando tecnicas matemáticas.
 
@@ -590,14 +589,20 @@ H. Se priorizo en la visualización de datos relevantes en la demostración del 
 
 ## 6. Bibliografía 
 
-- Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
+- Corinne Brucato. (2013). THE TRAVELING SALESMAN PROBLEM. 16/09/2018, de University of Pittsburgh Sitio web: https://www.mathematics.pitt.edu/sites/default/files/TSP.pdf
 
-- Rihawi, I. (6 de diciembre de 2009). Búsqueda no informada: Algoritmo de Coste Uniforme. Recuperado de https://poiritem.wordpress.com/2009/12/06/6-5-1-busqueda-no-informada-algoritmo-de-coste-uniforme/ 
+- Departamento de Informática. (2010). COMPLEJIDAD ALGORÍTMICA. 17/09/2018, de Universidad de Valladolid Sitio web: https://www2.infor.uva.es/~jvalvarez/docencia/tema5.pdf
 
 - Fernando, P. (18 de diciembre de 2017). Algoritmo para búsqueda con coste uniforme. Recuperado de https://www.revolucionia.com/2017/12/Algoritmo_para_busqueda_con_coste_uniforme.html
 
-- Corinne Brucato. (2013). THE TRAVELING SALESMAN PROBLEM. 16/09/2018, de University of Pittsburgh Sitio web: https://www.mathematics.pitt.edu/sites/default/files/TSP.pdf
+- Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
 
 - Mohamed AIT ABDERRAHMAN. (2017). TravellingSalesmanProblem. 15/09/2018, de GitHub Sitio web: https://github.com/BD2C/TravellingSalesmanProblem/blob/master/backtracking.py
 
-- Departamento de Informática. (2010). COMPLEJIDAD ALGORÍTMICA. 17/09/2018, de Universidad de Valladolid Sitio web: https://www2.infor.uva.es/~jvalvarez/docencia/tema5.pdf
+- Rihawi, I. (6 de diciembre de 2009). Búsqueda no informada: Algoritmo de Coste Uniforme. Recuperado de https://poiritem.wordpress.com/2009/12/06/6-5-1-busqueda-no-informada-algoritmo-de-coste-uniforme/ 
+
+
+
+
+
+
