@@ -173,7 +173,7 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
                                              
 En este sentido, para el peor caso, el cual consiste en que para todos los caminos encontrados haya sido necesario el uso del algoritmo **UCS**, la complejidad algoritmica o el tiempo de ejecución **T(n)** se podria aproximar con la siguiente expresión:
 
-                                             T(n) = 2^n + X*(h^(1+(C/p)))
+                                             T(n) = O(2^n) + X*O(h^(1+(C/p)))
                                         
                   n: representa el numero de nodos o lugares por visitar en el algoritmo planteado.
                   h: este valor corresponde al número promedio de descendientes por nodo.
