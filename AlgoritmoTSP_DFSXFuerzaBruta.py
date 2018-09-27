@@ -1,6 +1,5 @@
 import math
 import copy
-from tkinter import *
         
 
 def DFS(Grafo, NroNodos, NodoInicial, Nodo, NodosVisitados, Profundidad, ConCaminos, ConNodosRecorridos, ConDistanciaRecorrida, salir):

@@ -40,7 +40,7 @@ def abrir_ventana2():
     cMetodo = Label(ventana, text="Por favor seleccióne el algoritmo con las estrategias correspondientes a utilizar:  ",bg="#4169E1",fg="#FFF").place(x=50,y=230)
     metodo = Spinbox(ventana, values=("Backtracking y UCS","DFS y FuerzaBruta"), textvariable = estrategia).place(x=50,y=260)
     EtiInput = Label(ventana, text="INGRESO DE DATOS",bg="#8B4513",fg="#FFF").place(x=230,y=70)
-    EtiOutput = Label(ventana, text="VISUALIZACIÓN DE DATOS",bg="#FFA500",fg="#000").place(x=215,y=300)
+    EtiOutput = Label(ventana, text="VISUALIZACIÓN DE RESULTADOS",bg="#FFA500",fg="#000").place(x=200,y=300)
     ventana.mainloop()
 
 def Ir_A_Algoritmo():
@@ -79,7 +79,7 @@ imagen1 = PhotoImage(file="mapita.png")
 fondo1 = Label(ventanap, image=imagen1).place(x=0,y=0)
 Titulo = Label(ventanap, text="TRAVEL SALESMAN PROBLEM (Posibles soluciones)",
                  bg="#FFFF00",fg="#000").place(x=60,y=110)
-Option = Label(ventanap, text="Seleccióne la estrategia a probar :",
-                 bg="#7FFF00",fg="#000").place(x=105,y=150)
+Option = Label(ventanap, text="Seleccione el siguiente botón para comenzar :",
+                 bg="#7FFF00",fg="#000").place(x=90,y=150)
 botonA1 = Button(ventanap,text="Iniciar Prueva de los algoritmos",command=abrir_ventana2).place(x=107,y=217)
 ventanap.mainloop()
