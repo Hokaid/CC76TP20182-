@@ -1,4 +1,4 @@
-from lectorgrafo import *
+from lectogeneragrafo import *
 from tkinter import *
 from tkinter import messagebox
 from AlgoritmoTSP_BackTrackingXUCS import *
