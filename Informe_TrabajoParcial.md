@@ -417,6 +417,8 @@ print(tps2 - tps1)
 Debido a que la solución del problema se llevo a cabo mediante la combinación de los algoritmos DFS y Fuerza Bruta. De los algoritmos, mencionados anterirmente, se recupero la logica del recorido DFS y se hizo un acercamiento a la solucion recorriendo todos los nodos mediante fuerza bruta. El algoritmo planteado se basa en realizar un recorrido de tipo DFS a través del grafo, probando todos los caminos (soluciones) posibles y determinando el mejor de ellos. En sintesis, para poder solucionar el problema del vendedor viajero es necesario llevar a cabo una investigacion orientada al entendimiento del problema y su respectiva solución. 
 
 ## 4. Analisis de Complejidad Algoritmica
+A continuación, se pasará a definir el concepto de complejidad algorítmica:
+ “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid)
 ###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
 
 Para realizar este analisis, se procedera a representar el tiempo de ejecución de nuestro algoritmo mediante una función **T(n)**, la cual es una función que depende de **n**. Además, se debe tener en cuenta que, para este caso particular, **n** representa el numero de nodos o lugares por visitar en el algoritmo planteado. 
@@ -469,7 +471,7 @@ Para realizar este analisis, se procedera a representar el tiempo de ejecución 
                                              
 En este sentido, para el peor caso, el cual consiste en que para todos los caminos encontrados haya sido necesario el uso del algoritmo **UCS**, la complejidad algoritmica o el tiempo de ejecución **T(n)** se podria aproximar con la siguiente expresión:
 
-                                             T(n) = 2^n + X*(h^(1+(C/p)))
+                                             T(n) = O(2^n) + X*O(h^(1+(C/p)))
                                         
                   n: representa el numero de nodos o lugares por visitar en el algoritmo planteado.
                   h: este valor corresponde al número promedio de descendientes por nodo.
@@ -477,12 +479,10 @@ En este sentido, para el peor caso, el cual consiste en que para todos los camin
                   C: representa el tiempo de la solución optima para el algoritmo UCS.
                   X: numero de caminos (soluciones) encontrados.
                  
-- Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoria de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Por lo tanto, se podria estimar la complejidad del algoritmo como una expresión que varia entre la primera Notación Big O dada (**(2^n)**) y la ultima expresión representada, dependiendo de las condiciones del grafo. 
+- Sin embargo, la expresión dada anteriormente no representa la complejidad real del algoritmo, ya que para la mayoria de los casos, se va a utilizar en muy pocas ocasiones el algoritmo **UCS**. Esto sucede porque no siempre va a ser necesario hacer uso del algoritmo UCS para encontrar un camino (posible solución). Por lo tanto, se podria estimar la complejidad del algoritmo como una expresión que varia entre la primera Notación Big O dada (**(2^n)**) y la ultima expresión representada, dependiendo de las condiciones del grafo. 
                  
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
--A continuación, se pasará a definir el concepto de complejidad algorítmica:
- “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid)
  
 Para determinar la complejidad del algoritmo propuesto se hará uso de la siguiente formula, es importante resaltar que la formula propuesta nos ayudara a determinar la complejidad de la parte recursiva de este. 
 
