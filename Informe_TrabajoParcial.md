@@ -121,12 +121,12 @@ if(encontrado == False):
 
 ###      3.2. Marco Teórico del Algoritmo basado en DFS y Fuerza Bruta
 Los recursos recuperados para la implementación del algoritmo se basan en dos puntos principales:
-- Información sobre el problema del vendedor viajero (traveling salesman problem).
-- Información sobre algoritmos de tipo backtraking que resuelvan problemas con nodos.  
+•	Información sobre el problema del problema del vendedor viajero (traveling salesman problem).
+•	Información sobre algoritmos de tipo backtraking que resuelvan problemas con nodos.  
 
 A continuación, se mostrara parte de la imformación recuperada de cada punto.
 
-Investigación sobre TSP:
+Investigación sobre TSP: Me base en este texto para entender el problema del vendedor viajero. Para plantear una solucion a un problema, lo más importante es entender dicho problema. A razon de ello, se recurrio al siguiente texto para entender el problema. 
 
             A traveling salesman wishes to go to a certain number of destinations in order to sell objects. He wants to
             travel to each destination exactly once and return home taking the shortest total route.
@@ -147,9 +147,9 @@ Investigación sobre TSP:
             from one part of the city to the next. Thus, the Traveling Salesman Problem optimizes routes.
             
  
-Algoritmos que resuelvan el TSP:
+Algoritmos que resuelvan el TSP: 
  
-Algoritmo dijkstra C++:
+Algoritmo dijkstra C++: Me base en este algoritmo para entender la logica de recorrido de todos los nodos de un grafo y sumar sus pesos.
 
 ```c++
 struct cmp {
@@ -264,7 +264,7 @@ int main(){
 }
 ```
 
-Algoritmo BackTraking phyton:
+Algoritmo BackTraking phyton: Me base en este algoritmo para entender la logica del recorrido de nodos con Backtraking.
 
 ```python
 import time
@@ -414,10 +414,10 @@ print "temps d'execution"
 print(tps2 - tps1)
 
 ```
+Debido a que la sulucion del problema se llevo a cabo mediante la combinación de los algoritmos DFS y Fuerza Bruta. De los algoritmos, mencionados anterirmente, se recupero la logica del Backtraking y se hizo un acercamiento a la solucion recorriendo todos los nodos mediante fuerza bruta.
+En sintesis, para poder solucionar el problema del vendedor viajero es necesario llevar a cabo una investigacion orientada al entendimiento del problema y su respectiva solución. 
 
 ## 4. Analisis de Complejidad Algoritmica
-A continuación, se pasará a definir el concepto de complejidad algorítmica:
- “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid). Llegados a este punto, se procederá a analizar la complejidad algorítmica de cada uno de los algoritmos planteados. 
 ###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
 
 Para realizar este analisis, se procedera a representar el tiempo de ejecución de nuestro algoritmo mediante una función **T(n)**, la cual es una función que depende de **n**. Además, se debe tener en cuenta que, para este caso particular, **n** representa el numero de nodos o lugares por visitar en el algoritmo planteado. 
@@ -482,7 +482,9 @@ En este sentido, para el peor caso, el cual consiste en que para todos los camin
                  
 
 ###      4.2. Analisis del Algoritmo basado en DFS y Fuerza Bruta
-
+-A continuación, se pasará a definir el concepto de complejidad algorítmica:
+ “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid)
+ 
 Para determinar la complejidad del algoritmo propuesto se hará uso de la siguiente formula, es importante resaltar que la formula propuesta nos ayudara a determinar la complejidad de la parte recursiva de este. 
 
                                                 T(n) = a*T(n-1) + O(n^k)
@@ -540,35 +542,52 @@ def DFS(Grafo, NroNodos, NodoInicial, Nodo, NodosVisitados, Profundidad, ConCami
     else:
         return -1, [], []
 ```
-Al analizar el algoritmo, se evidencia los valores de ‘a’ y ‘k’. Al remplazar los valores encontrados en la fórmula se obtendrá la siguiente igualdad.
+Al analizar el algoritmo, se evidencia los valores de ‘a’ y ‘k’. Al remplazar los valores encontrados en la fórmula se obtendrá la siguiente igualdad. Hay que precisar que 'a' es el numero de llamadas recursivas que entra en el 'for', o sea se basa en el numero de nodos.
 
-                                                   T(n) = 2*T(n-1) + O(1)
+                                                   T(n) = n*T(n-1) + O(1)
                                                             
 Cuando seguimos el recorrido de la recursividad en el algoritmo vemos que la igualdad cambiara, ya que para cada llamada el T(n-1) ira aumentado hasta llegar la condición de parada. Es por ello que la identidad, definida anteriormente, permutara en cada llamada recursiva de la siguiente forma:    
 
 
-                                      Primera entrada recursiva  T(n) = 2*T(n-1)+1
-                                      Segunda entrada recursiva  T(n) = 2*(2*T(n-2)+1)+1
-                                      Tercera entrada recursiva  T(n) = 2*(2*(2*T(n-3)+1)+1)+1
-                                      Cuarta entrada recursiva  T(n) = 2*(2*(2*(2*T(n-4)+1)+1)+1)+1
-                                      Quinta entrada recursiva  T(n) = 2*(2*(2*(2*(2*T(n-5)+1)+1)+1)+1)+1
+                                      Primera entrada recursiva (1) T(n) = n*T(n-1)+1
+                                      Segunda entrada recursiva (2) T(n) = n*(n-1*T(n-2)+1)+1
+                                      Tercera entrada recursiva (3) T(n) = n*(n-1*(n-2*T(n-3)+1)+1)+1
+                                      Cuarta entrada recursiva (4) T(n) = n*(n-1*(-2n*(n-3*T(n-4)+1)+1)+1)+1
+                                      Quinta entrada recursiva (5) T(n) = n*(n*-1(n*-2(n*-3(n-4*T(n-5)+1)+1)+1)+1)+1
 		                                    .	.
 			                        .
 			                        .
 
 La permutación de la identidad toma una forma que asemeja la de una progresión, gracias ello podemos hacer uso de la ‘inducción matemática’ para generalizar la progresión:
                                       
-                                                    (2^n)*T(n-n)+(2^n)-1
+                                            (n)*(n-1)*(n-2)*(n-3)*(n-4)*...*(n-(n-1)) - 1
                                                     
-                                                    
+'n' representa el numero de nodos del algoritmo.                                                  
 Resolviendo por concemtos matematicos nos queda la complejidad final del algoritmo:
                                                    
-                                                     Big(o): O(2^n)
+                                                     Big(o): O(!(n - 1))
                                                      
-En concecuencia, concluimos que el algoritmo basado en DFS y Fuerza Bruta es inmanejable, ya que la complejidad del algoritmo es exponencial.                                                   
+En concecuencia, concluimos que el algoritmo basado en DFS y Fuerza Bruta es inmanejable, ya que la complejidad big(o) del algoritmo es de tipo factorial.                                                   
 
 ## 5. Conclusiones
 - En conclusión, se cumplieron los objetivos propuestos satisfactoriamente. Se desarrollo soluciones basadas en el problema dado haciendo uso de herramientas y técnicas (Algoritmos) aprendidas a lo largo del curso. Los algoritmos usados para dicha solución son: Backtraking-UCS y DFS. De la misma forma, se evidencio la aplicación de las competencias generales y específicas, siendo estas las de Razonamiento Cuantitativo y, Planificación y Conducción de Experimentos respectivamente. Esto se ve reflejado en el uso de técnicas matemáticas (Teorema Maestro) para hallar la complejidad de los algoritmos implementados y la exhaustiva investigación de algoritmos que den una solución adecuada al problema planteado. Para finalizar, el presente trabajo satisface los objetivos planteados.
+
+A. Se planteo una solución satisfactoria al problema y se presento mediante tablas.
+
+B. Se desarrollo soluciónes para el problema usando tecnicas matemáticas.
+
+C. En la investigacion correspondiente se encontro herramientas modernas para derle solución al problema.
+
+D. Todas las tecnicas implementadas para dar solución al problema se basan en algoritmos trabajados en clase.
+
+E. Se Elaboro un marco teorico acorde a la solución del problema
+
+F. Se determino y se explico la complejidad de cada algoritmo de forma detallada
+
+G. Por la misma naturaleza del problema, no se pudo encontrar una solucion optima con los algoritmos vistos en clase
+
+H. Se priorizo en la visualización de datos relevantes en la demostración del problema 
+
 ## 6. Bibliografía 
 
 - Köhler, J. [jkohlerc]. (17 de enero de 2010). Problema del vendedor viajero [Archivo de video]. Recuperado de https://www.youtube.com/watch?v=EutHYzkSo5Y&t=5s 
@@ -576,3 +595,9 @@ En concecuencia, concluimos que el algoritmo basado en DFS y Fuerza Bruta es inm
 - Rihawi, I. (6 de diciembre de 2009). Búsqueda no informada: Algoritmo de Coste Uniforme. Recuperado de https://poiritem.wordpress.com/2009/12/06/6-5-1-busqueda-no-informada-algoritmo-de-coste-uniforme/ 
 
 - Fernando, P. (18 de diciembre de 2017). Algoritmo para búsqueda con coste uniforme. Recuperado de https://www.revolucionia.com/2017/12/Algoritmo_para_busqueda_con_coste_uniforme.html
+
+- Corinne Brucato. (2013). THE TRAVELING SALESMAN PROBLEM. 16/09/2018, de University of Pittsburgh Sitio web: https://www.mathematics.pitt.edu/sites/default/files/TSP.pdf
+
+- Mohamed AIT ABDERRAHMAN. (2017). TravellingSalesmanProblem. 15/09/2018, de GitHub Sitio web: https://github.com/BD2C/TravellingSalesmanProblem/blob/master/backtracking.py
+
+- Departamento de Informática. (2010). COMPLEJIDAD ALGORÍTMICA. 17/09/2018, de Universidad de Valladolid Sitio web: https://www2.infor.uva.es/~jvalvarez/docencia/tema5.pdf
