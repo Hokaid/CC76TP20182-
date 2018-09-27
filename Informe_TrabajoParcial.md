@@ -416,7 +416,7 @@ print(tps2 - tps1)
 ```
 
 ## 4. Analisis de Complejidad Algoritmica
--A continuación, se pasará a definir el concepto de complejidad algorítmica:
+A continuación, se pasará a definir el concepto de complejidad algorítmica:
  “La complejidad algorítmica representa la cantidad de recursos (temporales) que necesita un algoritmo para resolver un problema y por     tanto permite determinar la eficiencia de dicho algoritmo.”                   (Departamento de Informática Universidad de Valladolid). Llegados a este punto, se procederá a analizar la complejidad algorítmica de cada uno de los algoritmos planteados. 
 ###      4.1. Analisis del Algoritmo basado en BackTracking y UCS
 
